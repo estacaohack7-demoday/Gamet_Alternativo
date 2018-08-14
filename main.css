@@ -775,16 +775,15 @@ main {
     position: fixed;
     top: 0;
     right: 0;
-    left: 25%;
-    bottom: 10%;
+    left: 0;
+    bottom: 20%;
     z-index: 102;
     background: rgba(0,0,0,0.85);
     overflow: scroll;
     opacity: 0;
-    width: 25%;
     transition: 0.35s ease;
     padding-bottom: 13vh;
-    transform:translateY(100%);
+    transform: translateY(100%);
 }
 
 .hidden_profile h3 {
@@ -1021,7 +1020,7 @@ main {
 
 .photo_line img {
     height: 100%;
-    width: 65.1%;
+    width: 90%;
     object-fit: cover;
     float: left;
 }
