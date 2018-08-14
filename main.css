@@ -1768,7 +1768,7 @@ main {
         right: 0;
         left: 0;
         bottom: 0;
-        background: linear-gradient(crimson, orangered);
+        background: linear-gradient(slateblue, deepskyblue);
         display: flex;
         justify-content: center;
         align-items: center;
