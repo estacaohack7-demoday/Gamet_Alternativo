@@ -1855,4 +1855,19 @@ main {
     .dots div {
         margin: 0 1.2vh;
     }
+
+    .warning_landscape {
+        position:fixed;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+        background:crimson;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:white;
+        z-index: 10000;
+    }
+
 }
