@@ -452,7 +452,7 @@ main {
     font-weight: 300;
     left: 7%;
     position: absolute;
-    line-height: calc(5vh - 2vw);
+    line-height: calc(5vh - 1vw);
     font-size: calc(6vw - 1vh);
 }
 .level_container {
@@ -615,9 +615,9 @@ main {
 
 .see_more{
     position: absolute;
-    width: 10vw;
+    width: 6vh;
     height: 9vh;
-    bottom: 15%;
+    bottom: 13%;
     right: 0;
     left: 0;
     background: #111;
@@ -639,7 +639,7 @@ main {
 
 @keyframes shadow_closer {
     0% {
-        box-shadow: 0 5px 0 #111, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+        box-shadow: 0 0 0 #111, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
     }
 
     100% {
@@ -1197,7 +1197,9 @@ main {
     align-items: center;
 }
 .party_confirm_container img {
-    width:80%;
+    height: 10vh;
+    cursor: pointer;
+    object-fit: contain;
     cursor: pointer;
 }
 
@@ -1758,103 +1760,7 @@ main {
 
 
 
-@media (min-width: 150vh) {
-
-    .compatibility {
-        width:85%
-    }
-    .compatibility h2 {
-        line-height: calc(6.8vh - 2vw);
-        font-size: 1.15vw;
-    }
-
-    .configure_menu > div {
-        height: 15vh;
-    }
-
-    .button_text h3 {
-        font-size: 3vh;
-    }
-
-    .button_text p {
-        font-size: 2vh;
-    }
-
-    .party_user_profile {
-        width: 21vh;
-        height: 21vh;
-    }
-
-    .subwindow {
-        width: 100%;
-    }
-
-    .subwindows_container > div {
-        width: 100%;
-    }
-
-    .msg_info p {
-        font-size: 3.5vh;
-        line-height: 4vh;
-    }
-
-    .msg_info h3 {
-        font-size: 2vh;
-    }
-
-    .msg_img_ctn div {
-        width: 13vh;
-        height: 13vh;
-    }
-
-    .msg_img_ctn {
-        border: 1vh solid rgba(255,255,255,0.1);
-        width: 45%;
-    }
-
-    .side_right .msg_img_ctn div {
-        box-shadow: 0 0 30px 5px rgba(0,0,0,0.3), 5px 0 0 0.5vh rgba(255,255,255,0.8);
-    }
-
-    .side_left .msg_img_ctn div {
-        box-shadow: 0 0 30px 5px rgba(0,0,0,0.3), -5px 0 0 0.5vh rgba(255,255,255,0.8);
-    }
-
-    .see_more_conex {
-        font-size: 3vh;
-    }
-
-    .social_photo_container {
-        width: 15vh;
-        height: 15vh;
-        border: 0.5vh solid white;
-    }
-
-    .friends_container article {
-        height: 26vh;
-    }
-
-    .friends_container article h3 {
-        color: white;
-        font-size: 3vh;
-    }
-
-    .main_section {
-        width: 25vw;
-        box-shadow: 0 0 7px 1px rgba(255,255,255,0.8);
-    }
-
-    .side_right .msg_info {
-        margin-right: 0%;
-    }
-
-    .side_left .msg_info {
-        margin-left: 0%;
-    }
-
-    .dots div {
-        margin: 0 1.2vh;
-    }
+@media (min-width: 100vh) {
 
     .warning_landscape {
         position:fixed;
@@ -1868,6 +1774,7 @@ main {
         align-items: center;
         color:white;
         z-index: 10000;
+        flex-direction: column;
     }
 
 }
