@@ -354,7 +354,7 @@ main {
 }
 .name_bar p {
     font-size: 4vw;
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
 }
 
@@ -374,15 +374,13 @@ main {
     background: rgba(255,255,255,0.5);
     border-radius: 500px;
     margin: 3vh auto 1vh auto;
-    /* box-shadow: 0 0 0 20px rgba(255,255,255,0.05), 0 0 0 40px rgba(255,255,255,0.05), 0 0 0 60px rgba(255,255,255,0.05); */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     will-change: box-shadow;
-
-    animation: drop_shadows_anim infinite 3s 2s cubic-bezier(0.48, 0.19, 0.54,1.51);
-
+    animation: drop_shadows_anim infinite 3s ease alternate-reverse;
+    animation-delay: 3s;
     position: absolute;
     left: 0;
     right: 0;
@@ -437,7 +435,7 @@ main {
 .compatibility {
     width: 80%;
     height: 13vh;
-    background: var(--default-black);
+    background: rgba(0,0,0,0.9);
     border-radius: 110px;
     display: flex;
     align-items: center;
