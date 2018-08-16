@@ -2,13 +2,12 @@
 
 body, html {
     width: 100%;
-    height: 90vh;
     margin:0;
-    overflow: hidden;
     background: #EEE;
     position: relative;
     z-index: -2;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6, p, span {
     margin:0;
@@ -21,10 +20,6 @@ h1, h2, h3, h4, h5, h6, p, span {
     --unlike-press-anim-time:0.5s;
 }
 
-.desktop_container {
-    height: 100%;
-}
-
 .main_section {
     width: 100vw;
     height: 100%;
@@ -33,17 +28,32 @@ h1, h2, h3, h4, h5, h6, p, span {
     overflow: hidden;
 }
 main {
-    width: 400vw;
-    height: 80vh;
+    width: 100%;
+    height: 90vh;
     /* transition:0.2s ease; */
 }
 .great_background {
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
+    background: -webkit-gradient(linear, left bottom, left top, from(#e39924), to(#dd5717));
+    background: -webkit-linear-gradient(bottom, #e39924, #dd5717);
+    background: -o-linear-gradient(bottom, #e39924, #dd5717);
     background: linear-gradient(0deg, #e39924, #dd5717);
+    background: -webkit-gradient(linear, left bottom, left top, from(#ff2b9f), to(#bf3464));
+    background: -webkit-linear-gradient(bottom, #ff2b9f, #bf3464);
+    background: -o-linear-gradient(bottom, #ff2b9f, #bf3464);
     background: linear-gradient(0deg, #ff2b9f, #bf3464);
+    background: -webkit-gradient(linear, left top, left bottom, from(#00A348), to(#009C6A));
+    background: -webkit-linear-gradient(#00A348, #009C6A);
+    background: -o-linear-gradient(#00A348, #009C6A);
     background: linear-gradient(#00A348, #009C6A);
+    background: -webkit-gradient(linear, left bottom, left top, from(#964fff), to(#670fff));
+    background: -webkit-linear-gradient(bottom, #964fff, #670fff);
+    background: -o-linear-gradient(bottom, #964fff, #670fff);
     background: linear-gradient(0deg, #964fff, #670fff);
+    background: -webkit-gradient(linear, left bottom, left top, from(#00caf3), to(#7644ff));
+    background: -webkit-linear-gradient(bottom, #00caf3, #7644ff);
+    background: -o-linear-gradient(bottom, #00caf3, #7644ff);
     background: linear-gradient(0deg, #00caf3, #7644ff);
     position: fixed;
     z-index: -1;
@@ -52,24 +62,35 @@ main {
 .top_menu {
     width: 100vw;
     height: 10vh;
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     z-index: 106;
     background:rgba(255,255,255,0.2);
 }
 .top_menu a {
     width: 15vw;
     height:80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     cursor: pointer;
 }
 .top_menu a svg {
     width: 100%;
     height: 75%;
+    -webkit-transition:0.3s ease;
+    -o-transition:0.3s ease;
     transition:0.3s ease;
     fill: var(--default-black);
 }
@@ -120,17 +141,29 @@ main {
 .profile_photos {
     width: 100%;
     height: 35vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .profile_photos_inner {
     width: 90%;
     height: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
 }
 
@@ -139,18 +172,26 @@ main {
     height: 28vh;
     overflow: hidden;
     border-radius: 1000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     position: relative;
     z-index: 2;
-    box-shadow: 0 20px 140px #fff;
+    -webkit-box-shadow: 0 20px 140px #fff;
+            box-shadow: 0 20px 140px #fff;
 }
 
 .main_profile_photo img, .secondary_photos div img, .party_user_profile img, .msg_img_ctn div img, .social_photo_container img, .image_container img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .secondary_photos {
@@ -158,10 +199,17 @@ main {
     height: 50%;
     position: absolute;
     bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    transform: translateY(-23.6%);
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateY(-23.6%);
+        -ms-transform: translateY(-23.6%);
+            transform: translateY(-23.6%);
 }
 
 .secondary_photos div {
@@ -170,9 +218,17 @@ main {
     border-radius: 200px;
     overflow: hidden;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .edit_photos {
@@ -183,10 +239,18 @@ main {
     background: white;
     z-index: 3;
     border-radius: 100px;
-    transform: translateY(38%);
+    -webkit-transform: translateY(38%);
+        -ms-transform: translateY(38%);
+            transform: translateY(38%);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     cursor: pointer;
 }
 
@@ -198,10 +262,19 @@ main {
 .profile_name {
     width: 100%;
     height: 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .profile_name h2 {
@@ -219,6 +292,9 @@ main {
 .profile_name div {
     width: 50%;
     height: 3px;
+    background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(white),to(transparent));
+    background: -webkit-linear-gradient(left, transparent, white,transparent);
+    background: -o-linear-gradient(left, transparent, white,transparent);
     background: linear-gradient(90deg, transparent, white,transparent);
     opacity: 0.5;
 }
@@ -243,11 +319,17 @@ main {
 
 .right_attached {
     float: right;
+    background: -webkit-gradient(linear, right top, left top, from(transparent), to(rgba(255,255,255,0.4)));
+    background: -webkit-linear-gradient(right, transparent, rgba(255,255,255,0.4));
+    background: -o-linear-gradient(right, transparent, rgba(255,255,255,0.4));
     background: linear-gradient(-90deg, transparent, rgba(255,255,255,0.4));
     border-radius: 1000px 0 0 1000px;
 }
 
 .left_attached {
+    background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(255,255,255,0.4)));
+    background: -webkit-linear-gradient(left, transparent, rgba(255,255,255,0.4));
+    background: -o-linear-gradient(left, transparent, rgba(255,255,255,0.4));
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4));
     clear: both;
     border-radius:0 1000px 1000px 0;
@@ -284,9 +366,16 @@ main {
 .button_text {
     height: 100%;
     width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: white;
 }
 
@@ -339,11 +428,21 @@ main {
     width: 100%;
     height: 10vh;
     background: rgba(255,255,255,0.15);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     color: white;
 }
 .name_bar h1 {
@@ -362,10 +461,19 @@ main {
     background: rgba(255,255,255,0.3);
     width: 44%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .playmatch_middle {
@@ -374,50 +482,139 @@ main {
     background: rgba(255,255,255,0.5);
     border-radius: 500px;
     margin: 3vh auto 1vh auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     will-change: box-shadow;
     animation: drop_shadows_anim infinite 3s ease alternate-reverse;
-    animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
     position: absolute;
     left: 0;
     right: 0;
 }
 
 
-@keyframes drop_shadows_anim {
+@-webkit-keyframes drop_shadows_anim {
     0% {
-        box-shadow:
+        -webkit-box-shadow:
+        0 0 0 0 rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1);
+                box-shadow:
         0 0 0 0 rgba(255,255,255,0.1),
         0 0 0 0 rgba(255,255,255,0.1),
         0 0 0 0 rgba(255,255,255,0.1);
     }
 
     15% {
-        box-shadow:
+        -webkit-box-shadow:
+        0 0 0 15px rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1);
+                box-shadow:
         0 0 0 15px rgba(255,255,255,0.1),
         0 0 0 0 rgba(255,255,255,0.1),
         0 0 0 0 rgba(255,255,255,0.1);
     }
 
     30% {
-        box-shadow:
+        -webkit-box-shadow:
+        0 0 0 15px rgba(255,255,255,0.1),
+        0 0 0 30px rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1);
+                box-shadow:
         0 0 0 15px rgba(255,255,255,0.1),
         0 0 0 30px rgba(255,255,255,0.1),
         0 0 0 0 rgba(255,255,255,0.1);
     }
 
     45% {
-        box-shadow:
+        -webkit-box-shadow:
+        0 0 0 15px rgba(255,255,255,0.1),
+        0 0 0 30px rgba(255,255,255,0.1),
+        0 0 0 45px rgba(255,255,255,0.1);
+                box-shadow:
         0 0 0 15px rgba(255,255,255,0.1),
         0 0 0 30px rgba(255,255,255,0.1),
         0 0 0 45px rgba(255,255,255,0.1);
     }
 
     100% {
-        box-shadow:
+        -webkit-box-shadow:
+        0 0 0 15px rgba(255,255,255,0),
+        0 0 0 30px rgba(255,255,255,0),
+        0 0 0 45px rgba(255,255,255,0);
+                box-shadow:
+        0 0 0 15px rgba(255,255,255,0),
+        0 0 0 30px rgba(255,255,255,0),
+        0 0 0 45px rgba(255,255,255,0);
+    }
+
+}
+
+
+@keyframes drop_shadows_anim {
+    0% {
+        -webkit-box-shadow:
+        0 0 0 0 rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1);
+                box-shadow:
+        0 0 0 0 rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1);
+    }
+
+    15% {
+        -webkit-box-shadow:
+        0 0 0 15px rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1);
+                box-shadow:
+        0 0 0 15px rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1);
+    }
+
+    30% {
+        -webkit-box-shadow:
+        0 0 0 15px rgba(255,255,255,0.1),
+        0 0 0 30px rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1);
+                box-shadow:
+        0 0 0 15px rgba(255,255,255,0.1),
+        0 0 0 30px rgba(255,255,255,0.1),
+        0 0 0 0 rgba(255,255,255,0.1);
+    }
+
+    45% {
+        -webkit-box-shadow:
+        0 0 0 15px rgba(255,255,255,0.1),
+        0 0 0 30px rgba(255,255,255,0.1),
+        0 0 0 45px rgba(255,255,255,0.1);
+                box-shadow:
+        0 0 0 15px rgba(255,255,255,0.1),
+        0 0 0 30px rgba(255,255,255,0.1),
+        0 0 0 45px rgba(255,255,255,0.1);
+    }
+
+    100% {
+        -webkit-box-shadow:
+        0 0 0 15px rgba(255,255,255,0),
+        0 0 0 30px rgba(255,255,255,0),
+        0 0 0 45px rgba(255,255,255,0);
+                box-shadow:
         0 0 0 15px rgba(255,255,255,0),
         0 0 0 30px rgba(255,255,255,0),
         0 0 0 45px rgba(255,255,255,0);
@@ -437,9 +634,15 @@ main {
     height: 13vh;
     background: rgba(0,0,0,0.9);
     border-radius: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     position: absolute;
     bottom: 25%;
     left: 0;
@@ -461,9 +664,15 @@ main {
     position: absolute;
 }
 .compat_level {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .compat_level img {
     width: 100%;
@@ -484,17 +693,29 @@ main {
     right: 0;
     bottom: -10%;
     font-size: 2vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .bottom_info {
     width: 100%;
     height: 17vh;
     bottom: 12%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
 }
 .bottom_info_container {
@@ -510,19 +731,32 @@ main {
 .generos_container {
     width: 80%;
     height: 62%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .generos_container div {
     height: 40%;
     width: 48%;
     color: white;
     background: rgba(255,255,255,0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .generos_container div p {
     text-align: center;
@@ -544,71 +778,131 @@ main {
     height: 10vh;
     position: absolute;
     bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     z-index: 400;
 }
 
 .like_unlike > div {
     width: 49%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     cursor: pointer;
     border: 1vw solid rgba(0,0,0,0.15);
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .like_unlike > div img {
     height: 70%;
-    transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
 }
 
 .like_container_move {
-    animation: like_anim 1s ease alternate;
+    -webkit-animation: like_anim 1s ease alternate;
+            animation: like_anim 1s ease alternate;
 }
 
 .unlike_container_move {
-    animation: unlike_anim 1s ease alternate;
+    -webkit-animation: unlike_anim 1s ease alternate;
+            animation: unlike_anim 1s ease alternate;
+}
+
+@-webkit-keyframes like_anim {
+    0% {
+        -webkit-transform:scale(1) rotateZ(0deg);
+                transform:scale(1) rotateZ(0deg);
+    }
+
+    50% {
+        -webkit-transform:scale(1.62) rotateZ(10deg);
+                transform:scale(1.62) rotateZ(10deg);
+    }
+
+    80% {
+        -webkit-transform:scale(1) rotateZ(0deg);
+                transform:scale(1) rotateZ(0deg);
+    }
 }
 
 @keyframes like_anim {
     0% {
-        transform:scale(1) rotateZ(0deg);
+        -webkit-transform:scale(1) rotateZ(0deg);
+                transform:scale(1) rotateZ(0deg);
     }
 
     50% {
-        transform:scale(1.62) rotateZ(10deg);
+        -webkit-transform:scale(1.62) rotateZ(10deg);
+                transform:scale(1.62) rotateZ(10deg);
     }
 
     80% {
-        transform:scale(1) rotateZ(0deg);
+        -webkit-transform:scale(1) rotateZ(0deg);
+                transform:scale(1) rotateZ(0deg);
+    }
+}
+
+
+@-webkit-keyframes unlike_anim {
+    0% {
+        -webkit-transform:scale(1) rotateZ(0deg);
+                transform:scale(1) rotateZ(0deg);
+    }
+
+    50% {
+        -webkit-transform:scale(1.62) rotateZ(-20deg);
+                transform:scale(1.62) rotateZ(-20deg);
+    }
+
+    80% {
+        -webkit-transform:scale(1) rotateZ(0deg);
+                transform:scale(1) rotateZ(0deg);
     }
 }
 
 
 @keyframes unlike_anim {
     0% {
-        transform:scale(1) rotateZ(0deg);
+        -webkit-transform:scale(1) rotateZ(0deg);
+                transform:scale(1) rotateZ(0deg);
     }
 
     50% {
-        transform:scale(1.62) rotateZ(-20deg);
+        -webkit-transform:scale(1.62) rotateZ(-20deg);
+                transform:scale(1.62) rotateZ(-20deg);
     }
 
     80% {
-        transform:scale(1) rotateZ(0deg);
+        -webkit-transform:scale(1) rotateZ(0deg);
+                transform:scale(1) rotateZ(0deg);
     }
 }
 
 
 .unlike_container {
+    background: -webkit-linear-gradient(105deg, var(--default-black) 49%, #171717 51%);
+    background: -o-linear-gradient(105deg, var(--default-black) 49%, #171717 51%);
     background: linear-gradient(-15deg, var(--default-black) 49%, #171717 51%);
     border-radius: 0 var(--little-border-radius-like-unlike) var(--big-border-radius-like-unlike) 0;
 }
 
 .like_container {
+    background: -webkit-linear-gradient(75deg, white 49%, #ECECEC 51%);
+    background: -o-linear-gradient(75deg, white 49%, #ECECEC 51%);
     background: linear-gradient(15deg, white 49%, #ECECEC 51%);
     border-radius: var(--little-border-radius-like-unlike) 0 0 var(--big-border-radius-like-unlike);
 }
@@ -625,25 +919,47 @@ main {
     z-index: 10;
     border-radius: 300px;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-image: url(assets/fingerprint.svg);
     background-repeat: no-repeat;
     background-size: 120%;
     background-position: 55% 23%;
     cursor: pointer;
-    box-shadow: 0 5px 50px #111, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
-    animation: searching_anim 0.7s ease-out infinite alternate, shadow_closer 0.7s ease-out infinite alternate;
+    -webkit-box-shadow: 0 5px 50px #111, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+            box-shadow: 0 5px 50px #111, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+    -webkit-animation: searching_anim 0.7s ease-out infinite alternate, shadow_closer 0.7s ease-out infinite alternate;
+            animation: searching_anim 0.7s ease-out infinite alternate, shadow_closer 0.7s ease-out infinite alternate;
+}
+
+@-webkit-keyframes shadow_closer {
+    0% {
+        -webkit-box-shadow: 0 0 0 #111, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+                box-shadow: 0 0 0 #111, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+    }
+
+    100% {
+        -webkit-box-shadow: 0 5px 50px #000, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+                box-shadow: 0 5px 50px #000, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+    }
 }
 
 @keyframes shadow_closer {
     0% {
-        box-shadow: 0 0 0 #111, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+        -webkit-box-shadow: 0 0 0 #111, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+                box-shadow: 0 0 0 #111, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
     }
 
     100% {
-        box-shadow: 0 5px 50px #000, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+        -webkit-box-shadow: 0 5px 50px #000, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+                box-shadow: 0 5px 50px #000, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
     }
 }
 
@@ -654,9 +970,15 @@ main {
 .up_signal {
     width: 100%;
     height: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .see_more p {
     color: white;
@@ -671,8 +993,10 @@ main {
     width: 100%;
     font-size: 6vw;
     cursor: pointer;
+    position: -webkit-sticky;
     position: sticky;
-    box-shadow: 0 10px 100px 0px rgba(255,255,255,0.5);
+    -webkit-box-shadow: 0 10px 100px 0px rgba(255,255,255,0.5);
+            box-shadow: 0 10px 100px 0px rgba(255,255,255,0.5);
     top: 0;
     text-align: center;
     font-weight: 100;
@@ -684,16 +1008,46 @@ main {
 /* --- playmatch animations --- */
 
 
-@keyframes slipe {
+@-webkit-keyframes slipe {
     0% {
-        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
         opacity: 1;
     }
 
     100% {
 
-        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+
+                transform: translateX(-100%);
         opacity: 0;
+    }
+}
+
+
+@keyframes slipe {
+    0% {
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+        opacity: 1;
+    }
+
+    100% {
+
+        -webkit-transform: translateX(-100%);
+
+                transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes reduce_compatibility {
+    0% {
+        width:75%;
+    }
+
+    100% {
+        width:11vh;
     }
 }
 
@@ -707,6 +1061,17 @@ main {
     }
 }
 
+@-webkit-keyframes adjust_level_container {
+    0% {
+        right: 2%;
+    }
+
+    100% {
+        right:1vw;
+
+    }
+}
+
 @keyframes adjust_level_container {
     0% {
         right: 2%;
@@ -715,6 +1080,20 @@ main {
     100% {
         right:1vw;
 
+    }
+}
+
+@-webkit-keyframes comp_h2_hide {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
@@ -733,19 +1112,23 @@ main {
 }
 
 .playmatch_middle_unlike_animation {
-    animation: drop_shadows_anim infinite 3s 2s cubic-bezier(0.48, 0.19, 0.54,1.51), slipe var(--unlike-press-anim-time) ease alternate;
+    -webkit-animation: drop_shadows_anim infinite 3s 2s cubic-bezier(0.48, 0.19, 0.54,1.51), slipe var(--unlike-press-anim-time) ease alternate;
+            animation: drop_shadows_anim infinite 3s 2s cubic-bezier(0.48, 0.19, 0.54,1.51), slipe var(--unlike-press-anim-time) ease alternate;
 }
 
 .compatibility_unlike_animation {
-    animation: reduce_compatibility var(--unlike-press-anim-time) ease alternate;
+    -webkit-animation: reduce_compatibility var(--unlike-press-anim-time) ease alternate;
+            animation: reduce_compatibility var(--unlike-press-anim-time) ease alternate;
 }
 
 .level_container_unlike_animation {
-    animation: adjust_level_container var(--unlike-press-anim-time) ease alternate;
+    -webkit-animation: adjust_level_container var(--unlike-press-anim-time) ease alternate;
+            animation: adjust_level_container var(--unlike-press-anim-time) ease alternate;
 }
 
 .compatibility_h2_unlike_animation {
-    animation:comp_h2_hide var(--unlike-press-anim-time) linear alternate;
+    -webkit-animation:comp_h2_hide var(--unlike-press-anim-time) linear alternate;
+            animation:comp_h2_hide var(--unlike-press-anim-time) linear alternate;
 }
 
 
@@ -766,7 +1149,9 @@ main {
 
                 .show_hidden_profile {
                     opacity: 1 !important;
-                    transform:translateY(0) !important;
+                    -webkit-transform:translateY(0) !important;
+                        -ms-transform:translateY(0) !important;
+                            transform:translateY(0) !important;
                 }
 
 .hidden_profile {
@@ -780,9 +1165,13 @@ main {
     overflow: scroll;
     opacity: 0;
     width: 100%;
+    -webkit-transition: 0.35s ease;
+    -o-transition: 0.35s ease;
     transition: 0.35s ease;
     padding-bottom: 13vh;
-    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%);
 }
 
 .hidden_profile h3 {
@@ -810,8 +1199,10 @@ main {
     .first_place img, .two_places > div > img, .recent_games > div > img, .waiting_for > div > img {
         width:100%;
         height: 100%;
-        object-fit: cover;
-        object-position: center;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
     }
 
 
@@ -821,13 +1212,22 @@ main {
         width: 100%;
         height: 38.2%;
         text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         background: rgba(0,0,0,0.7);
         color: white;
         font-size: 5vw;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .game_name p {
@@ -843,8 +1243,14 @@ main {
     height: 25vh;
     margin-bottom: 3vh;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .two_places > div {
@@ -854,20 +1260,28 @@ main {
 }
 
 .top_status {
+    background: -webkit-linear-gradient(130deg, rgba(0,0,0,0.9), rgba(0,0,0,0.8), rgba(0,0,0,0.9));
+    background: -o-linear-gradient(130deg, rgba(0,0,0,0.9), rgba(0,0,0,0.8), rgba(0,0,0,0.9));
     background: linear-gradient(-40deg, rgba(0,0,0,0.9), rgba(0,0,0,0.8), rgba(0,0,0,0.9));
     height: 5.5vh;
     position: absolute;
     right: 0;
     top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
     .top_status img {
         height: 61.8%;
         width: auto;
-        object-fit: contain;
+        -o-object-fit: contain;
+           object-fit: contain;
         margin: 0 2vw;
     }
 
@@ -881,10 +1295,17 @@ main {
 }
 
 .devices, .ids {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .devices div,  .fav_genres > div, .ids div {
@@ -892,10 +1313,21 @@ main {
     height: 17vh;
     margin-bottom: 3vh;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: white;
     line-height: 0;
 }
@@ -912,9 +1344,14 @@ main {
 }
 
 .recent_games, .fav_genres, .waiting_for {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .recent_games > div, .waiting_for > div {
@@ -993,7 +1430,8 @@ main {
     margin: 0 auto;
     background: rgba(0, 191, 255, 0.6);
     padding: 0 0 8% 0;
-    box-shadow: inset 0 0 100px 5px rgba(255,255,255,0.4);
+    -webkit-box-shadow: inset 0 0 100px 5px rgba(255,255,255,0.4);
+            box-shadow: inset 0 0 100px 5px rgba(255,255,255,0.4);
 }
 
 .description_container h3 {
@@ -1011,16 +1449,24 @@ main {
 .photo_line {
     width: auto;
     height: 100%;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
     transition: 0.5s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 
 .photo_line img {
     height: 100%;
     width: 90%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     float: left;
 }
 
@@ -1069,19 +1515,37 @@ main {
 .party_configure {
     width: 100%;
     height: 13%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), color-stop(rgba(0,0,0,0.1)), to(rgba(255,255,255,0.4)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.4), rgba(0,0,0,0.1), rgba(255,255,255,0.4));
+    background: -o-linear-gradient(top, rgba(0,0,0,0.4), rgba(0,0,0,0.1), rgba(255,255,255,0.4));
     background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.1), rgba(255,255,255,0.4));
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .party_configure > div {
     width: 25%;
     height: 100%;
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
 }
 
@@ -1092,9 +1556,15 @@ main {
     background-repeat: no-repeat;
     width: 90%;
     height: 5vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .party_configure div span {
@@ -1115,16 +1585,22 @@ main {
 .party_users_above {
     width: 100%;
     height: 38.2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .party_users_below {
     width: 100%;
     height: 61.8%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .party_users_above > div, .party_users_below > div {
     width: 50%;
     height: 100%;
+    background: -webkit-linear-gradient(45deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2), rgba(255,255,255,0.5));
+    background: -o-linear-gradient(45deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2), rgba(255,255,255,0.5));
     background: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2), rgba(255,255,255,0.5));
     position: relative;
 }
@@ -1135,9 +1611,15 @@ main {
     border-radius: 200px;
     position: absolute;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .party_user_profile svg {
     width: 55%;
@@ -1164,9 +1646,15 @@ main {
     background: white;
     position: absolute;
     border-radius: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-weight: 900;
     font-size: 3vh;
     border: 0.6vh solid var(--default-black);
@@ -1192,30 +1680,47 @@ main {
     width:100%;
     position:absolute;
     bottom:1.5vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .party_confirm_container img {
     height: 10vh;
     cursor: pointer;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     cursor: pointer;
 }
 
 .searching_partners {
     width: 61.8%;
     height: 38.2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .dots {
     width: 100%;
     height: calc(100%/4);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+        -ms-transform: translateY(10px);
+            transform: translateY(10px);
 }
 
 .dots div {
@@ -1227,24 +1732,41 @@ main {
 }
 
 .dots div:nth-child(1){
-    animation: searching_anim 0.5s ease infinite alternate;
+    -webkit-animation: searching_anim 0.5s ease infinite alternate;
+            animation: searching_anim 0.5s ease infinite alternate;
 }
 
 .dots div:nth-child(2) {
-    animation: searching_anim 0.5s 0.25s ease infinite alternate;
+    -webkit-animation: searching_anim 0.5s 0.25s ease infinite alternate;
+            animation: searching_anim 0.5s 0.25s ease infinite alternate;
 }
 
 .dots div:nth-child(3) {
-    animation: searching_anim 0.5s 0.5s ease infinite alternate;
+    -webkit-animation: searching_anim 0.5s 0.5s ease infinite alternate;
+            animation: searching_anim 0.5s 0.5s ease infinite alternate;
+}
+
+@-webkit-keyframes searching_anim {
+    0% {
+        -webkit-transform:translateY(0px);
+                transform:translateY(0px);
+    }
+
+    100% {
+        -webkit-transform:translateY(-15px);
+                transform:translateY(-15px);
+    }
 }
 
 @keyframes searching_anim {
     0% {
-        transform:translateY(0px);
+        -webkit-transform:translateY(0px);
+                transform:translateY(0px);
     }
 
     100% {
-        transform:translateY(-15px);
+        -webkit-transform:translateY(-15px);
+                transform:translateY(-15px);
     }
 }
 
@@ -1295,15 +1817,29 @@ main {
     margin-top: 10vh;
     background: rgba(255,255,255,0.2);
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .submenu > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 60%;
     width: 10%;
 }
@@ -1332,9 +1868,15 @@ main {
 .conections_title {
     height: 10vh;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .conections_title h3 {
@@ -1345,30 +1887,57 @@ main {
 
 .friends_container_container {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .friends_container {
     width: 90%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .friends_container article {
     width: 40%;
     height: 33vh;
+    background: -webkit-linear-gradient(60deg,
+    rgba(255,255,255,0.4),
+    rgba(255,255,255,0.1),
+    rgba(255,255,255,0.4));
+    background: -o-linear-gradient(60deg,
+    rgba(255,255,255,0.4),
+    rgba(255,255,255,0.1),
+    rgba(255,255,255,0.4));
     background: linear-gradient(30deg,
     rgba(255,255,255,0.4),
     rgba(255,255,255,0.1),
     rgba(255,255,255,0.4));
-    box-shadow: 0 5px 20px 5px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 5px 20px 5px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 20px 5px rgba(0,0,0,0.15);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-bottom: 5%;
     position: relative;
     border-radius: 5px;
@@ -1396,6 +1965,8 @@ main {
     z-index: 100;
     visibility: hidden;
     opacity: 0;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
     transition: 0.5s ease;
     border-radius: 5px;
     overflow: hidden;
@@ -1414,6 +1985,8 @@ main {
         
         visibility: hidden;
         opacity: 0;
+        -webkit-transition:0.5s ease;
+        -o-transition:0.5s ease;
         transition:0.5s ease;
     }
 
@@ -1431,9 +2004,15 @@ main {
 .click_options div {
     width: 100%;
     height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .click_options > img {
@@ -1456,11 +2035,17 @@ main {
 }
 
 .side_left {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .side_right {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 .side_left .msg_img_ctn {
@@ -1475,9 +2060,15 @@ main {
 
 .message {
     height: 18vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: -webkit-linear-gradient(135deg, transparent, rgba(255,255,255,0.15), transparent);
+    background: -o-linear-gradient(135deg, transparent, rgba(255,255,255,0.15), transparent);
     background: linear-gradient(-45deg, transparent, rgba(255,255,255,0.15), transparent);
     cursor: pointer;
 }
@@ -1487,11 +2078,17 @@ main {
     width: 35%;
     height: 100%;
     background: rgba(255,255,255,0.15);
-    box-shadow: 0 0 30px 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 0 30px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 30px 10px rgba(0,0,0,0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .talks_window > article {
@@ -1528,10 +2125,17 @@ main {
 
 .msg_info {
     width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     height: 80%;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     color: white;
 }
 
@@ -1753,7 +2357,9 @@ main {
 
 
 
-
+.warning_landscape {
+    display: none;
+}
 
 
 
@@ -1768,13 +2374,25 @@ main {
         right: 0;
         left: 0;
         bottom: 0;
+        background: -webkit-gradient(linear, left top, left bottom, from(slateblue), to(deepskyblue));
+        background: -webkit-linear-gradient(slateblue, deepskyblue);
+        background: -o-linear-gradient(slateblue, deepskyblue);
         background: linear-gradient(slateblue, deepskyblue);
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         color: white;
         z-index: 10000;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         font-size: 3vw;
         text-align: center;
     }
