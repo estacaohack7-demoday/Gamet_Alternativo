@@ -21,14 +21,19 @@ let name_bar = document.querySelector('.name_bar')
 let profile_photo = document.querySelector('.image_container')
 let profile_window = document.querySelector('.hidden_profile')
 let voltar_playmatch = document.querySelector('.return')
+let voltar_playmatch_two = document.querySelector('.top_menu')
 
 see_profile.addEventListener('click', showHiddenProfile)
 name_bar.addEventListener('click', showHiddenProfile)
 profile_photo.addEventListener('click', showHiddenProfile)
 
-voltar_playmatch.addEventListener('click', function() {
+voltar_playmatch.addEventListener('click', hideHiddenProfile)
+voltar_playmatch_two.addEventListener('click', hideHiddenProfile)
+
+
+function hideHiddenProfile() {
     profile_window.classList.remove('show_hidden_profile')
-})
+}
 
 
 function showHiddenProfile() {
@@ -99,115 +104,10 @@ unlikeButton.addEventListener('click', unlikePressed)
 
 
 
-// BOTÕES SUPERIORES
-var profileButton = document.querySelector('#PROFILE')
-var playmatchButton = document.querySelector('#PLAYMATCH')
-var partyButton = document.querySelector('#PARTY')
-var connectionsButton = document.querySelector('#CONNECTIONS')
-
-// ARRAY DOS BOTÕES
-var topButtons = [profileButton, playmatchButton, partyButton, connectionsButton]
-
-// TAMANHO DA JANELA
-var screenSize = window.innerWidth;
-
-//MAIN TAG
-var mainTag = document.querySelector('main')
-
-function topButtonClick() {
-    if(this == profileButton) {
-        this.querySelector('svg').classList.add('activated_top_button')
-
-        playmatchButton.querySelector('svg').classList.remove('activated_top_button')
-        partyButton.querySelector('svg').classList.remove('activated_top_button')
-        connectionsButton.querySelector('svg').classList.remove('activated_top_button')
-
-        mainTag.style.transform = "translateX(0vw)"
-    }
-
-    else if(this == playmatchButton) {
-        this.querySelector('svg').classList.add('activated_top_button')
-
-        profileButton.querySelector('svg').classList.remove('activated_top_button')
-        partyButton.querySelector('svg').classList.remove('activated_top_button')
-        connectionsButton.querySelector('svg').classList.remove('activated_top_button')
-        profile_window.classList.remove('show_hidden_profile')
-        
-        mainTag.style.transform = "translateX(-100vw)"
-    }
-
-    else if(this == partyButton) {
-        this.querySelector('svg').classList.add('activated_top_button')
-
-        profileButton.querySelector('svg').classList.remove('activated_top_button')
-        playmatchButton.querySelector('svg').classList.remove('activated_top_button')
-        connectionsButton.querySelector('svg').classList.remove('activated_top_button')
-
-        mainTag.style.transform = "translateX(-200vw)"
-        
-    }
-
-    else if(this == connectionsButton) {
-        this.querySelector('svg').classList.add('activated_top_button')
-
-        profileButton.querySelector('svg').classList.remove('activated_top_button')
-        partyButton.querySelector('svg').classList.remove('activated_top_button')
-        playmatchButton.querySelector('svg').classList.remove('activated_top_button')
-
-        
-        mainTag.style.transform = "translateX(-300vw)"
-    }
-}
-
-topButtons[0].addEventListener("click", topButtonClick);
-topButtons[1].addEventListener("click", topButtonClick);
-topButtons[2].addEventListener("click", topButtonClick);
-topButtons[3].addEventListener("click", topButtonClick);
 
 
 
 
-
-
-
-
-
-
-
-
-
-// // FILA DE FOTOS NO PERFIL DE TERCEIROS
-// let filaFotos = document.querySelector('.photo_line')
-// let filaFotosArray = document.querySelectorAll('.photo_line img')
-// let fotoContador = 0;
-
-// let fotoPosicao = filaFotosArray[fotoContador]
-
-// function moverFilaFotos() {
-
-//     fotoContador++;
-//     console.log(fotoContador);
-
-//     switch(fotoContador) {
-//         case(1):
-//             filaFotos.style.transform="translateX(-90vw)";
-//             break;
-//         case(2):
-//             filaFotos.style.transform="translateX(-180vw)";
-//             break;
-//         case(3):
-//             filaFotos.style.transform="translateX(-270vw)";
-//             break;
-//         case(4):
-//             filaFotos.style.transform="translateX(0vw)";
-//             fotoContador = 0;
-//             break;
-
-//     }
-
-// }
-
-// filaFotos.addEventListener('click', moverFilaFotos)
 
 
 
