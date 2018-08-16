@@ -2,12 +2,13 @@
 
 body, html {
     width: 100%;
+    height: 90vh;
     margin:0;
+    overflow: hidden;
     background: #EEE;
     position: relative;
     z-index: -2;
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6, p, span {
     margin:0;
@@ -20,6 +21,10 @@ h1, h2, h3, h4, h5, h6, p, span {
     --unlike-press-anim-time:0.5s;
 }
 
+.desktop_container {
+    height: 100%;
+}
+
 .main_section {
     width: 100vw;
     height: 100%;
@@ -28,13 +33,13 @@ h1, h2, h3, h4, h5, h6, p, span {
     overflow: hidden;
 }
 main {
-    width: 100%;
-    height: 90vh;
+    width: 400vw;
+    height: 80vh;
     /* transition:0.2s ease; */
 }
 .great_background {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background: -webkit-gradient(linear, left bottom, left top, from(#e39924), to(#dd5717));
     background: -webkit-linear-gradient(bottom, #e39924, #dd5717);
     background: -o-linear-gradient(bottom, #e39924, #dd5717);
@@ -62,7 +67,7 @@ main {
 .top_menu {
     width: 100vw;
     height: 10vh;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2357,9 +2362,7 @@ main {
 
 
 
-.warning_landscape {
-    display: none;
-}
+
 
 
 
