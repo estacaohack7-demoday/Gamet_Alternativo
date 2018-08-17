@@ -1431,7 +1431,7 @@ main {
 }
 
 .description_container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     background: rgba(0, 191, 255, 0.6);
     padding: 0 0 8% 0;
@@ -1444,7 +1444,7 @@ main {
 }
 
 .profile_photos_container {
-    width: 90vw;
+    width: 100%;
     height: 90vw;
     margin: 0 auto 5% auto;
     overflow-x: scroll;
@@ -1469,7 +1469,7 @@ main {
 
 .photo_line img {
     height: 100%;
-    width: 90%;
+    width: 95%;
     -o-object-fit: cover;
        object-fit: cover;
     float: left;
