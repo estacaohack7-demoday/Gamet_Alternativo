@@ -1154,9 +1154,7 @@ main {
 
                 .show_hidden_profile {
                     opacity: 1 !important;
-                    -webkit-transform:translateY(0) !important;
-                        -ms-transform:translateY(0) !important;
-                            transform:translateY(0) !important;
+                    visibility: visible !important;
                 }
 
 .hidden_profile {
@@ -1174,9 +1172,7 @@ main {
     -o-transition: 0.35s ease;
     transition: 0.35s ease;
     padding-bottom: 13vh;
-    -webkit-transform: translateY(100%);
-        -ms-transform: translateY(100%);
-            transform: translateY(100%);
+    visibility: hidden;
 }
 
 .hidden_profile h3 {
@@ -1464,12 +1460,12 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    position:relative;
 }
-
 
 .photo_line img {
     height: 100%;
-    width: 95%;
+    width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     float: left;
